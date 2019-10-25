@@ -23,3 +23,5 @@ RUN apt-get install -y nodejs
 
 RUN apt-get -yq install curl
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+
+COPY php/config/ /usr/local/etc/php/conf.d/
