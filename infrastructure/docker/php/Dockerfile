@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.1-fpm
 
 WORKDIR /var/www
 
@@ -25,3 +25,10 @@ RUN apt-get -yq install curl
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
 COPY php/config/ /usr/local/etc/php/conf.d/
+
+RUN apt-get -yq install zsh powerline fonts-powerline
+RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+RUN chsh -s /bin/zsh
+
+

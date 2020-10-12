@@ -1,1 +1,4 @@
-- run docker: docker-compose -f infrastructure/docker/docker-compose.yml up --build
+- put Application under folder "app"
+- run docker: docker-compose docker-compose.yml up --build
+- app is available on localhost:8085
+- db is available under localhost:3307
